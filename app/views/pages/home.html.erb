@@ -1,9 +1,10 @@
 <div class="container">
-  <div class="flex-center mt-4">
+  <div class="flex-center mt-4" data-controller="counter">
     <div class="counter">
-      <span><%= @restaurant_count %></span>
+      <span data-target="counter.count"><%= @restaurant_count %></span>
     </div>
 
-    <button class="btn btn-outline-secondary">Refresh counter</button>
+    <button class="btn btn-outline-secondary"
+          data-action="click->counter#refresh">Refresh counter</button>
   </div>
 </div>
